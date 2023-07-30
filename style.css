@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    130deg,
+    #2486ac 30%,
+    #3479aa 50%,
+    #5b8bbb 70%,
+    #6b78a1 100%
+  );
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 10;
+  position: absolute;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.mainHeading {
+  font-size: 80px;
+  color: #fff620;
+}
+.scoreArea {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-between;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 10px;
+}
+.btn {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.score {
+  color: #fff620;
+  font-size: 8rem;
+}
+button {
+  padding: 10px 50px;
+  font-size: 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff620;
+  color: #2486ac;
+  transition: 0.3s;
+}
+button:hover {
+  box-shadow: 2px 2px 20px black;
+}
+button:active {
+  transform: translate(1%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.hidden {
+  display: none;
+}
+.message {
+  font-size: 60px;
+  color: #fff620;
+}
+.moveLeftMsg {
+  font-size: 20px;
+}
+.playerName {
+  font-weight: 100;
+}
+
+@media screen and (max-width: 700px) {
+  .mainHeading {
+    font-size: 50px;
+  }
+  .message {
+    font-size: 40px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main {
+    gap: 0px;
+  }
+  .btn {
+    width: auto;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .scoreArea {
+    width: auto;
+  }
+  .score {
+    font-size: 5rem;
+  }
+}
